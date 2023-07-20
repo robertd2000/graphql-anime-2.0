@@ -1,0 +1,1 @@
+export { AnimeCardList } from "./ui";

@@ -5,15 +5,12 @@ import {
   ApolloProvider as ApolloClientProvider,
 } from "@apollo/client";
 
-const ApolloProvider = ({ children }: { children: ReactNode }) => {
-  const client = new ApolloClient({
-    uri: "https://graphql.anilist.co",
-    cache: new InMemoryCache(),
-  });
+const client = new ApolloClient({
+  uri: "https://graphql.anilist.co",
+  cache: new InMemoryCache(),
+});
 
-  return (
-    <ApolloClientProvider client={client}>{children}</ApolloClientProvider>
-  );
-};
+export const withApollo = (component: () => ReactNode) => () =>
+  <ApolloClientProvider client={client}>{component()}</ApolloClientProvider>;
 
-export default ApolloProvider;
+export default withApollo;

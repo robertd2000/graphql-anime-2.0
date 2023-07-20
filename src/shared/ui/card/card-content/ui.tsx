@@ -1,5 +1,5 @@
-import { Col, Row, Tag, Typography } from "antd";
 import { FC } from "react";
+import { Col, Row, Tag, Typography } from "antd";
 
 interface CardContentProps {
   studios: {
@@ -19,7 +19,7 @@ export const CardContent: FC<CardContentProps> = ({
   return (
     <Row
       style={{
-        padding: "1rem",
+        padding: "0.5rem",
         maxWidth: "240px",
         fontSize: "0.8rem",
       }}
@@ -27,6 +27,7 @@ export const CardContent: FC<CardContentProps> = ({
       <Col span={24}>
         {studios.map(({ name }) => (
           <Typography
+            key={name}
             style={{
               color: "rgb(138, 44, 15)",
               fontWeight: "bold",
@@ -51,6 +52,7 @@ export const CardContent: FC<CardContentProps> = ({
       <Col span={24}>
         {genres.map((genre) => (
           <Tag
+            key={genre}
             color="#2db7f5"
             style={{
               margin: "0.2rem 0.3rem",

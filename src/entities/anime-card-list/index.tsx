@@ -1,0 +1,1 @@
+export { useHomeAnimeList } from "./model";

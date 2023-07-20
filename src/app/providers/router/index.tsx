@@ -1,12 +1,11 @@
-import { Route, Routes } from "react-router";
-import { HomePage } from "../../../pages/home";
+import { BrowserRouter } from "react-router-dom";
+import { ReactNode, Suspense } from "react";
 
-const RouterProvider = () => {
-  return (
-    <Routes>
-      <Route path="/" element={<HomePage />} />
-    </Routes>
+const withRouter = (component: () => ReactNode) => () =>
+  (
+    <BrowserRouter>
+      <Suspense fallback="Loading...">{component()}</Suspense>
+    </BrowserRouter>
   );
-};
 
-export default RouterProvider;
+export default withRouter;

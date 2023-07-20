@@ -1,15 +1,5 @@
-import { BrowserRouter } from "react-router-dom";
-import ApolloProvider from "./apollo";
-import RouterProvider from "./router";
+import compose from "compose-function";
+import withRouter from "./router";
+import withApollo from "./apollo";
 
-const Provider = () => {
-  return (
-    <BrowserRouter>
-      <ApolloProvider>
-        <RouterProvider />
-      </ApolloProvider>
-    </BrowserRouter>
-  );
-};
-
-export default Provider;
+export const withProviders = compose(withRouter, withApollo);

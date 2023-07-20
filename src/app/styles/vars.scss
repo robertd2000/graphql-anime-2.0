@@ -1,0 +1,35 @@
+.gc-app {
+  /* base */
+  --clr-primary: #3399ff;
+  --clr-primary--hover: #76ade4;
+  --clr-primary--active: #2364a5;
+  --clr-danger: #9b7a78;
+  // оттенки серого
+  --clr-gray--900: #69788f;
+  --clr-gray--800: #7487a1;
+  --clr-gray--700: #8699b4;
+  --clr-gray--500: #a6b2c3;
+  --clr-gray--400: #b9c6da;
+  --clr-gray--300: #c8d2e3;
+  --clr-gray--200: #e4e7ec;
+  // Цвет с макета
+  --clr-gray--100: #eeeeee;
+  --clr-foreground: #e5e5e5;
+  // Немного затеняем background для контраста
+  --clr-background: #fafafa;
+
+  /* text */
+  --clr-text: #222222;
+  --fsz: 16px;
+  --fw--light: 300;
+  --fw--regular: 400;
+  --fw--medium: 500;
+
+  /* misc */
+  --transition: 0.25s;
+  --radius: 10px;
+
+  /* fonts */
+  --ff-primary: "Roboto", sans-serif;
+  --ff-secondary: "Roboto Mono", monospace;
+}

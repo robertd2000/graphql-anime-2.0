@@ -1,9 +1,26 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import Provider from "./providers";
+import { Grid, Layout } from "antd";
+import { Routing } from "~pages";
+import { Header } from "~widgets/header/ui";
+import { withProviders } from "./providers";
+import "./index.scss";
 
-ReactDOM.createRoot(document.getElementById("root")!).render(
-  <React.StrictMode>
-    <Provider />
-  </React.StrictMode>
-);
+const { useBreakpoint } = Grid;
+
+const App = () => {
+  const screens = useBreakpoint();
+
+  return (
+    <Layout>
+      <Header />
+      <Layout.Content
+        style={{
+          margin: screens.lg ? "2rem 10rem 1.5rem" : "1rem 3rem",
+        }}
+      >
+        <Routing />
+      </Layout.Content>
+    </Layout>
+  );
+};
+
+export default withProviders(App);

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { getAnimeList } from "../api";
+import { getAnimeList } from "../../api";
 
 export const useHomeAnimeList = () => {
   const [currentPage, setCurrentPage] = useState(1);

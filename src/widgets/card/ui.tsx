@@ -1,8 +1,7 @@
 import { Col } from "antd";
 import { FC } from "react";
-import { AnimeCard } from "~entities/card/ui/anime-card";
-import { CardPopover } from "~entities/card/ui/popover/ui";
-import { Media } from "~entities/home/types";
+import { Media } from "~entities/anime-card-list/types";
+import { AnimeCard, CardPopover } from "~entities/card";
 import { CardContent } from "~shared/ui/card/card-content";
 import { CardTitle } from "~shared/ui/card/card-title";
 
@@ -29,7 +28,12 @@ export const Card: FC<CardProps> = ({ data }) => {
         />
       }
     >
-      <Col md={{ span: 6 }} sm={{ span: 8 }} xs={{ span: 12 }}>
+      <Col
+        lg={{ span: 6 }}
+        md={{ span: 8 }}
+        sm={{ span: 12 }}
+        xs={{ span: 12 }}
+      >
         <AnimeCard
           title={(data.title.english as string) || data.title.native}
           image={data.coverImage.large}
