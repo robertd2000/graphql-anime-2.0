@@ -1,1 +1,1 @@
-export * from "./hooks/useHomeAnimeList";
+export * from "./hooks/useAnimeList";

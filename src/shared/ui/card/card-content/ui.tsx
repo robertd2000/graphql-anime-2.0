@@ -1,10 +1,9 @@
 import { FC } from "react";
 import { Col, Row, Tag, Typography } from "antd";
+import { Studios } from "~entities/anime-card-list/types";
 
 interface CardContentProps {
-  studios: {
-    name: string;
-  }[];
+  studios: Studios;
   genres: string[];
   episodes: number;
   type: string;
@@ -25,7 +24,7 @@ export const CardContent: FC<CardContentProps> = ({
       }}
     >
       <Col span={24}>
-        {studios.map(({ name }) => (
+        {studios.edges.slice(0, 3).map(({ node: { name } }) => (
           <Typography
             key={name}
             style={{

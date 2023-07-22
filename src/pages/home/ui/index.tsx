@@ -1,5 +1,9 @@
-import { AnimeCardList } from "~widgets/anime-card-list";
+import { AnimeOverview } from "~widgets/anime-overview";
 
 export const HomePage = () => {
-  return <AnimeCardList />;
+  return (
+    <>
+      <AnimeOverview />
+    </>
+  );
 };

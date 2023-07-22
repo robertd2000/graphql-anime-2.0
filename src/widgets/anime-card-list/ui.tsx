@@ -1,11 +1,11 @@
 import { Col, Pagination, Row } from "antd";
-import { useHomeAnimeList } from "~entities/anime-card-list";
+import { useAnimeList } from "~entities/anime-card-list";
+import { Card } from "~shared/ui/card";
 import { Spinner } from "~shared/ui/spinner";
-import { Card } from "~widgets/card";
 
 export const AnimeCardList = () => {
   const { currentPage, onChangePage, data, loading, totalPages } =
-    useHomeAnimeList();
+    useAnimeList();
 
   return loading ? (
     <Spinner isLoading={loading} />

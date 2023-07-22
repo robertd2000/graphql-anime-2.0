@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { Col, Row, Typography } from "antd";
-import { getRating } from "~entities/card/lib";
+import { getRating } from "~shared/lib";
 
 interface CardTitleProps {
   season: string;

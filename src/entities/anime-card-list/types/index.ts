@@ -23,15 +23,12 @@ export interface Media {
   seasonYear: number;
   coverImage: CoverImage;
   averageScore: number;
-  studios: {
-    nodes: {
-      name: string;
-    }[];
-  };
+  studios: Studios;
 }
 
 export interface Title {
   __typename: string;
+  userPreferred: string;
   english?: string;
   native: string;
 }
@@ -39,4 +36,17 @@ export interface Title {
 export interface CoverImage {
   __typename: string;
   large: string;
+}
+
+export interface Studios {
+  edges: Edge[];
+}
+
+export interface Edge {
+  node: Node;
+}
+
+export interface Node {
+  id: number;
+  name: string;
 }

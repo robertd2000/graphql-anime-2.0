@@ -1,1 +1,1 @@
-export { useHomeAnimeList } from "./model";
+export { useAnimeList } from "./model";

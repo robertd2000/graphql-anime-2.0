@@ -2,13 +2,14 @@ import { gql } from "@apollo/client";
 
 export const GET_ANIME_LIST = gql`
   query Page($page: Int) {
-    Page(page: $page, perPage: 20) {
+    Page(page: $page, perPage: 24) {
       pageInfo {
         total
       }
       media {
         id
         title {
+          userPreferred
           english
           native
         }
@@ -23,8 +24,11 @@ export const GET_ANIME_LIST = gql`
         }
         averageScore
         studios {
-          nodes {
-            name
+          edges {
+            node {
+              id
+              name
+            }
           }
         }
       }
