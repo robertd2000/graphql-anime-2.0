@@ -2,18 +2,22 @@ import { Col, Select, Typography } from "antd";
 import { useGenreCollection } from "~features/anime-search/model";
 
 export const GenreSelect = () => {
-  const { genreCollectionOptions, loading, onSelect } = useGenreCollection();
+  const { genreCollectionOptions, loading, onSelect, currentTags, onClear } =
+    useGenreCollection();
 
   return (
     <Col span={4}>
       <Typography.Title level={5}>Genres</Typography.Title>
       <Select
-        mode="multiple"
+        mode="tags"
         allowClear
-        options={genreCollectionOptions}
+        options={genreCollectionOptions || []}
+        defaultValue={currentTags}
         loading={loading}
-        onSelect={onSelect}
+        onSelect={(e) => onSelect(e!)}
+        onClear={onClear}
         placeholder="Any"
+        maxTagCount={"responsive"}
         style={{
           width: "100%",
         }}
