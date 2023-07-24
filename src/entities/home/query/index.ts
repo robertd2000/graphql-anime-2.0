@@ -1,5 +1,5 @@
 import { gql } from "@apollo/client";
-import { MEDIA } from "./media";
+import { MEDIA } from "~shared/query";
 
 export const GET_HOME_LIST = gql`
   ${MEDIA}

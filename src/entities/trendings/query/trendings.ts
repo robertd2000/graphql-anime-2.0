@@ -1,10 +1,10 @@
 import { gql } from "@apollo/client";
 import { MEDIA } from "~shared/query";
 
-export const GET_TRENDINGS_OVERVIEW_LIST = gql`
+export const GET_TRENDINGS_LIST = gql`
   ${MEDIA}
-  query {
-    trending: Page(page: 1, perPage: 6) {
+  query ($page: Int = 1) {
+    trending: Page(page: $page, perPage: 24) {
       media(sort: TRENDING_DESC, type: ANIME, isAdult: false) {
         ...media
       }
