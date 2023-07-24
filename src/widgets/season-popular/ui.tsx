@@ -1,14 +1,14 @@
 import { AnimeList } from "~entities/anime-list";
 import { Medum } from "~entities/home/types";
-import { useSearchAnime } from "~features/anime-search/model/hooks/useSearchAnime";
+import { useSeasonPopular } from "~entities/season-popular/model";
 
-export const AnimeCardList = () => {
-  const { currentPage, onChangePage, data, loading, totalPages } =
-    useSearchAnime();
+export const SeasonPopular = () => {
+  const { season, loading, currentPage, onChangePage, totalPages } =
+    useSeasonPopular();
 
   return (
     <AnimeList
-      data={data as Medum[]}
+      data={season as Medum[]}
       currentPage={currentPage}
       onChangePage={onChangePage}
       loading={loading}

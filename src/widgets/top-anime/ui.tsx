@@ -1,14 +1,13 @@
 import { AnimeList } from "~entities/anime-list";
 import { Medum } from "~entities/home/types";
-import { useSearchAnime } from "~features/anime-search/model/hooks/useSearchAnime";
+import { useTopAnime } from "~entities/top-anime";
 
-export const AnimeCardList = () => {
-  const { currentPage, onChangePage, data, loading, totalPages } =
-    useSearchAnime();
+export const TopAnime = () => {
+  const { top, loading, currentPage, onChangePage, totalPages } = useTopAnime();
 
   return (
     <AnimeList
-      data={data as Medum[]}
+      data={top as Medum[]}
       currentPage={currentPage}
       onChangePage={onChangePage}
       loading={loading}

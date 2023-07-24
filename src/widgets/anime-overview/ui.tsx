@@ -22,7 +22,7 @@ export const AnimeOverview: FC = () => {
       <Overview
         data={trendingAnimeList as Medum[]}
         title="TRENDING NOW"
-        href="/trending"
+        href="/trendings"
       />
       <Overview
         data={currentSeasonAnimeList as Medum[]}

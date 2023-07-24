@@ -1,19 +1,19 @@
 import { useState } from "react";
-import { getAnimeTrendingsList } from "../api";
+import { getAnimeTopList } from "../api";
 
-export const useTrendings = () => {
+export const useTopAnime = () => {
   const [currentPage, setCurrentPage] = useState(1);
 
-  const { data, loading } = getAnimeTrendingsList(currentPage);
+  const { data, loading } = getAnimeTopList(currentPage);
 
   const onChangePage = (page: number) => {
     setCurrentPage(page);
   };
 
-  const totalPages = data?.trending?.pageInfo?.total;
+  const totalPages = data?.top?.pageInfo?.total;
 
   return {
-    trendings: data?.trending?.media,
+    top: data?.top?.media,
     loading,
     currentPage,
     onChangePage,

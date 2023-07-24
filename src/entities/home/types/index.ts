@@ -7,6 +7,9 @@ export interface HomeData {
 }
 
 export interface Trending {
+  pageInfo: {
+    total: number;
+  };
   media: Medum[];
 }
 
@@ -82,6 +85,9 @@ export interface Node {
 }
 
 export interface Season {
+  pageInfo: {
+    total: number;
+  };
   media: Medum2[];
 }
 
@@ -218,6 +224,9 @@ export interface Node3 {
 }
 
 export interface Popular {
+  pageInfo: {
+    total: number;
+  };
   media: Medum4[];
 }
 
@@ -284,6 +293,9 @@ export interface Node4 {
 }
 
 export interface Top {
+  pageInfo: {
+    total: number;
+  };
   media: Medum5[];
 }
 
