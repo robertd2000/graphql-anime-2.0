@@ -1,5 +1,5 @@
 import { AnimeOverview } from "~widgets/anime-overview";
-import { AnimeSearch } from "~widgets/search";
+import { AnimeSearch } from "~widgets/filter";
 
 export const HomePage = () => {
   return (

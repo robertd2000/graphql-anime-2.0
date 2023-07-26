@@ -4,6 +4,7 @@ import { useHome } from "~entities/home/model/hooks/useHome";
 import { Overview } from "~entities/overview/ui";
 import { TopOverview } from "~entities/top-overview";
 import { Spinner } from "~shared/ui/spinner";
+import { Media } from "~shared/types";
 
 export const AnimeOverview: FC = () => {
   const {
@@ -20,26 +21,26 @@ export const AnimeOverview: FC = () => {
   ) : (
     <>
       <Overview
-        data={trendingAnimeList}
+        data={trendingAnimeList as Media[]}
         title="TRENDING NOW"
         href="&sort=TRENDING_DESC"
       />
       <Overview
-        data={currentSeasonAnimeList}
+        data={currentSeasonAnimeList as Media[]}
         title="POPULAR THIS SEASON"
         href={`year=${getYear()}&season=SUMMER`}
       />
       <Overview
-        data={nextSeasonAnimeList}
+        data={nextSeasonAnimeList as Media[]}
         title="UPCOMING NEXT SEASON"
         href={`&year=${getNextYear}&season=${getNextSeason()}`}
       />
       <Overview
-        data={popularAnimeList}
+        data={popularAnimeList as Media[]}
         title="ALL TIME POPULAR"
         href="sort=POPULARITY_DESC"
       />
-      <TopOverview data={topAnimeList} />
+      <TopOverview data={topAnimeList as Media[]} />
     </>
   );
 };

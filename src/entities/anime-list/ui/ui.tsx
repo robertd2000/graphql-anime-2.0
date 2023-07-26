@@ -1,11 +1,11 @@
 import { Col, Pagination, Row } from "antd";
 import { FC } from "react";
-import { Medum } from "~entities/home/types";
+import { Media } from "~shared/types";
 import { Card } from "~shared/ui/card";
 import { Spinner } from "~shared/ui/spinner";
 
 interface AnimeListProps {
-  data: Medum[];
+  data: Media[];
   loading: boolean;
   totalPages: number;
   currentPage: number;
@@ -32,7 +32,7 @@ export const AnimeList: FC<AnimeListProps> = ({
         }}
       >
         {data?.map((title) => (
-          <Card data={title as Medum} key={title.id} />
+          <Card data={title} key={title.id} />
         ))}
 
         <Col span={24}>

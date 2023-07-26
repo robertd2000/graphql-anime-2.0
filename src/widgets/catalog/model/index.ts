@@ -1,12 +1,12 @@
 import { useState } from "react";
-import { useSearchAnime } from "~features/anime-search";
+import { useFilter } from "~features/filters";
 import { getCatalog } from "~shared/api";
 
 export const useCatalogData = () => {
   const [currentPage, setCurrentPage] = useState(1);
 
   const { year, season, seasonYear, searchInput, genres, format, sort } =
-    useSearchAnime();
+    useFilter();
 
   const { data, loading, fetchMore } = getCatalog({
     page: currentPage,
