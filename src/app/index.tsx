@@ -4,21 +4,21 @@ import { Header } from "~widgets/header/ui";
 import { withProviders } from "./providers";
 import "./index.scss";
 
-const { useBreakpoint } = Grid;
+// const { useBreakpoint } = Grid;
 
 const App = () => {
-  const screens = useBreakpoint();
+  // const screens = useBreakpoint();
 
   return (
     <Layout>
       <Header />
-      <Layout.Content
+      {/* <Layout.Content
         style={{
           margin: screens.lg ? "2rem 10rem 1.5rem" : "1rem 3rem",
         }}
-      >
-        <Routing />
-      </Layout.Content>
+      > */}
+      <Routing />
+      {/* </Layout.Content> */}
     </Layout>
   );
 };

@@ -1,8 +1,9 @@
 import { FC } from "react";
 import { Col, Pagination, Row } from "antd";
 import { useCatalogData } from "../model";
-import { Card, Spinner } from "~shared/ui";
+import { Card } from "~shared/ui";
 import { Media } from "~shared/types";
+import { ListSkeleton } from "~shared/ui/skeleton";
 
 export const Catalog: FC = () => {
   const { currentPage, onChangePage, data, loading, totalPages } =
@@ -11,7 +12,7 @@ export const Catalog: FC = () => {
   return (
     <div>
       {loading ? (
-        <Spinner isLoading={loading} />
+        <ListSkeleton />
       ) : (
         <>
           <Row

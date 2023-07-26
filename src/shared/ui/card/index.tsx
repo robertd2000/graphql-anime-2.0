@@ -5,6 +5,7 @@ import { CardContent } from "~shared/ui/card/card-content";
 import { CardItem } from "./card-item";
 import { CardPopover } from "./card-popover";
 import { Media } from "~shared/types";
+import { Link } from "react-router-dom";
 
 interface CardProps {
   data: Media;
@@ -35,14 +36,16 @@ export const Card: FC<CardProps> = ({ data }) => {
         sm={{ span: 12 }}
         xs={{ span: 12 }}
       >
-        <CardItem
-          title={
-            (data.title.userPreferred as string) ||
-            data.title.english ||
-            data.title.native
-          }
-          image={data.coverImage.large}
-        />
+        <Link to={`/anime/${data.id}`}>
+          <CardItem
+            title={
+              (data.title.userPreferred as string) ||
+              data.title.english ||
+              data.title.native
+            }
+            image={data.coverImage.large}
+          />
+        </Link>
       </Col>
     </CardPopover>
   );

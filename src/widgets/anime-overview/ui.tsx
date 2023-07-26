@@ -3,8 +3,8 @@ import { getNextSeason, getNextYear, getYear } from "~entities/home/lib";
 import { useHome } from "~entities/home/model/hooks/useHome";
 import { Overview } from "~entities/overview/ui";
 import { TopOverview } from "~entities/top-overview";
-import { Spinner } from "~shared/ui/spinner";
 import { Media } from "~shared/types";
+import { ListSkeleton } from "~shared/ui/skeleton";
 
 export const AnimeOverview: FC = () => {
   const {
@@ -17,7 +17,7 @@ export const AnimeOverview: FC = () => {
   } = useHome();
 
   return loading ? (
-    <Spinner isLoading={loading} />
+    <ListSkeleton />
   ) : (
     <>
       <Overview
