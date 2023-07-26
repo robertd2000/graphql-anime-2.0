@@ -1,6 +1,6 @@
-import { Medum } from "~entities/home/types";
+import { Media } from "~shared/types";
 
 export interface TopOverviewTitleProps {
-  item: Medum;
+  item: Media;
   index: number;
 }

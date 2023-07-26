@@ -1,4 +1,3 @@
-export * from "./media";
 export * from "./popular";
 export * from "./season-popular";
 export * from "./top-anime";

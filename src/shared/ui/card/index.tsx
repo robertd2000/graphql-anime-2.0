@@ -4,11 +4,10 @@ import { CardTitle } from "~shared/ui/card/card-title";
 import { CardContent } from "~shared/ui/card/card-content";
 import { CardItem } from "./card-item";
 import { CardPopover } from "./card-popover";
-import { Media } from "~entities/anime-card-list/types";
-import { Medum } from "~entities/home/types";
+import { Media } from "~shared/types";
 
 interface CardProps {
-  data: Medum | Media;
+  data: Media;
 }
 
 export const Card: FC<CardProps> = ({ data }) => {

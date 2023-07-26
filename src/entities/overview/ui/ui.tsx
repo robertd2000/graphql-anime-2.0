@@ -2,12 +2,12 @@ import { FC } from "react";
 import { Row } from "antd";
 import { OverviewTitle } from "./overview-title/overview-title";
 import { OverviewList } from "./overview-list/overview-list";
-import { Medum } from "~entities/home/types";
+import { Media } from "~shared/types";
 
 interface OverviewProps {
   title: string;
   href: string;
-  data: Medum[];
+  data: Media[];
 }
 
 export const Overview: FC<OverviewProps> = ({ data, href, title }) => {
@@ -18,7 +18,7 @@ export const Overview: FC<OverviewProps> = ({ data, href, title }) => {
         marginBottom: "2.5rem",
       }}
     >
-      <OverviewTitle title={title} href={href} />
+      <OverviewTitle title={title} params={href} />
       <OverviewList data={data} />
     </Row>
   ) : null;

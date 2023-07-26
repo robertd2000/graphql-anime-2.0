@@ -1,6 +1,6 @@
 import { FC } from "react";
+import { getNextSeason, getNextYear, getYear } from "~entities/home/lib";
 import { useHome } from "~entities/home/model/hooks/useHome";
-import { Medum } from "~entities/home/types";
 import { Overview } from "~entities/overview/ui";
 import { TopOverview } from "~entities/top-overview";
 import { Spinner } from "~shared/ui/spinner";
@@ -20,26 +20,26 @@ export const AnimeOverview: FC = () => {
   ) : (
     <>
       <Overview
-        data={trendingAnimeList as Medum[]}
+        data={trendingAnimeList}
         title="TRENDING NOW"
-        href="/trendings"
+        href="&sort=TRENDING_DESC"
       />
       <Overview
-        data={currentSeasonAnimeList as Medum[]}
+        data={currentSeasonAnimeList}
         title="POPULAR THIS SEASON"
-        href="/season-popular"
+        href={`year=${getYear()}&season=SUMMER`}
       />
       <Overview
-        data={nextSeasonAnimeList as Medum[]}
+        data={nextSeasonAnimeList}
         title="UPCOMING NEXT SEASON"
-        href="/upcoming"
+        href={`&year=${getNextYear}&season=${getNextSeason()}`}
       />
       <Overview
-        data={popularAnimeList as Medum[]}
+        data={popularAnimeList}
         title="ALL TIME POPULAR"
-        href="/popular"
+        href="sort=POPULARITY_DESC"
       />
-      <TopOverview data={topAnimeList as Medum[]} />
+      <TopOverview data={topAnimeList} />
     </>
   );
 };

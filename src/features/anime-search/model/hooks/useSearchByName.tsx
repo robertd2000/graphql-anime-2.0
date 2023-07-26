@@ -11,14 +11,9 @@ export const useSearchByName = () => {
   const searchLocation = getLocationTag("search", search);
 
   const onInput = (e: string) => {
-    const { queryParams, isQueryLocation } = replaceQueryLocation(
-      "search",
-      search,
-      e
-    );
+    const { queryParams } = replaceQueryLocation("search", search, e);
 
-    if (isQueryLocation) navigate(`/search-anime?search=${e}`);
-    else if (!search) navigate(`/search-anime?search=${e}`);
+    if (!search) navigate(`/search-anime?search=${e}`);
     else navigate(`/search-anime/${queryParams}`);
   };
 

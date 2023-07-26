@@ -1,5 +1,5 @@
-import { Medum } from "~entities/home/types";
+import { Media } from "~shared/types";
 
 export interface TopOverviewListProps {
-  data: Medum[];
+  data: Media[];
 }

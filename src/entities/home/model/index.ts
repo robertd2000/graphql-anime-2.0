@@ -1,1 +1,1 @@
-export * from "./hooks/useTrendingOverview";
+export * from "./hooks/useHome";
