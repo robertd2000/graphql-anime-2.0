@@ -18,8 +18,20 @@ export const AnimeHeader = () => {
           backgroundImage: `url(${data?.bannerImage})`,
           backgroundSize: "cover",
           backgroundPosition: "50% 35%",
+          background:
+            "linear-gradient(180deg,rgba(var(--color-shadow-dark),0) 40%,rgba(var(--color-shadow-dark),.6))",
         }}
-      ></Col>
+      >
+        <Col
+          style={{
+            width: "100vw",
+            height: "50vh",
+            backgroundImage: `url(${data?.bannerImage})`,
+            backgroundSize: "cover",
+            backgroundPosition: "50% 35%",
+          }}
+        ></Col>
+      </Col>
       <Col span={24}>
         <LayoutCustom backgroundColor="white">
           <Row>

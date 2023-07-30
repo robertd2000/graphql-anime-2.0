@@ -7,17 +7,17 @@ export const ListSkeleton = () => {
         gutter={[16, 32]}
         align={"middle"}
         justify="start"
-        // justify="space-evenly"
         style={{
           marginTop: "2rem",
         }}
       >
-        {[...Array(24).keys()]?.map(() => (
+        {[...Array(24).keys()]?.map((i) => (
           <Col
             lg={{ span: 4 }}
             md={{ span: 8 }}
             sm={{ span: 12 }}
             xs={{ span: 12 }}
+            key={i}
           >
             <Card
               cover={

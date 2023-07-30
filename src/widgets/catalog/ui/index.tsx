@@ -19,7 +19,6 @@ export const Catalog: FC = () => {
             gutter={[16, 32]}
             align={"middle"}
             justify="start"
-            // justify="space-evenly"
             style={{
               marginTop: "2rem",
             }}
