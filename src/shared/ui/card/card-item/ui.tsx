@@ -6,21 +6,30 @@ const { Meta } = Card;
 interface CardItemProps {
   image: string;
   title: string;
+  size?: "small" | "medium";
 }
 
-export const CardItem: FC<CardItemProps> = ({ image, title }) => {
+export const CardItem: FC<CardItemProps> = ({
+  image,
+  title,
+  size = "medium",
+}) => {
   return (
     <Card
       hoverable
       style={{
-        maxWidth: 250,
+        maxWidth: size === "medium" ? 250 : 150,
         alignItems: "center",
         margin: "auto",
       }}
       cover={
         <img
           src={image}
-          style={{ width: "100%", objectFit: "cover", height: 250 }}
+          style={{
+            width: "100%",
+            objectFit: "cover",
+            height: size === "medium" ? 250 : 150,
+          }}
         />
       }
     >

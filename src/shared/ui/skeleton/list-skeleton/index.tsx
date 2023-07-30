@@ -27,7 +27,12 @@ export const ListSkeleton = () => {
                 />
               }
             >
-              <Skeleton active />
+              <Skeleton
+                active
+                style={{
+                  height: "50%",
+                }}
+              />
             </Card>
           </Col>
         ))}

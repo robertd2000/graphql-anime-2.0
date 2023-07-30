@@ -43,7 +43,7 @@ export interface AnimeMedia {
   reviewPreview: ReviewPreview;
   recommendations: Recommendations;
   externalLinks: ExternalLink[];
-  streamingEpisodes: any[];
+  streamingEpisodes: StreamingEpisode[];
   trailer: any;
   rankings: Ranking[];
   tags: Tag[];
@@ -76,16 +76,16 @@ export interface EndDate {
 }
 
 export interface Relations {
-  edges: Edge[];
+  edges: RelationsEdge[];
 }
 
-export interface Edge {
+export interface RelationsEdge {
   id: number;
   relationType: string;
-  node: Node;
+  node: AnimeMiniCard;
 }
 
-export interface Node {
+export interface AnimeMiniCard {
   id: number;
   title: Title2;
   format: string;
@@ -104,14 +104,14 @@ export interface CoverImage2 {
 }
 
 export interface CharacterPreview {
-  edges: Edge2[];
+  edges: CharacterPreviewEdge[];
 }
 
-export interface Edge2 {
+export interface CharacterPreviewEdge {
   id: number;
   role: string;
   name: any;
-  voiceActors: any[];
+  voiceActors: VoiceActor[];
   node: Node2;
 }
 
@@ -130,10 +130,10 @@ export interface Image {
 }
 
 export interface StaffPreview {
-  edges: Edge3[];
+  edges: StaffPreviewEdge[];
 }
 
-export interface Edge3 {
+export interface StaffPreviewEdge {
   id: number;
   role: string;
   node: Node3;
@@ -286,4 +286,26 @@ export interface StatusDistribution {
 export interface ScoreDistribution {
   score: number;
   amount: number;
+}
+
+export interface StreamingEpisode {
+  site: string;
+  title: string;
+  thumbnail: string;
+  url: string;
+}
+
+export interface VoiceActor {
+  id: number;
+  name: VoiceActorName;
+  language: string;
+  image: VoiceActorImage;
+}
+
+export interface VoiceActorName {
+  userPreferred: string;
+}
+
+export interface VoiceActorImage {
+  large: string;
 }

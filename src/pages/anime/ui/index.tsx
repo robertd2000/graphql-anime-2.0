@@ -1,6 +1,8 @@
+import { Outlet } from "react-router";
 import { ConfigProvider, Grid, Layout, theme } from "antd";
 import { AnimeHeader } from "~widgets/anime-header/ui";
 import { Sidebar } from "~widgets/sidebar";
+import { AnimeMenu } from "~entities/anime/menu";
 
 const { useBreakpoint } = Grid;
 
@@ -11,9 +13,6 @@ export const AnimePage = () => {
     <ConfigProvider
       theme={{
         algorithm: theme.defaultAlgorithm,
-        token: {
-          // colorBgBase: "#f5f5f5",
-        },
       }}
     >
       <AnimeHeader />
@@ -25,13 +24,13 @@ export const AnimePage = () => {
         <ConfigProvider
           theme={{
             algorithm: theme.defaultAlgorithm,
-            token: {
-              // colorBgBase: "#f5f5f5",
-            },
           }}
         >
           <Sidebar />
-          <Layout.Content>Content</Layout.Content>
+          <Layout.Content>
+            <AnimeMenu />
+            <Outlet />
+          </Layout.Content>
         </ConfigProvider>
       </Layout>
     </ConfigProvider>

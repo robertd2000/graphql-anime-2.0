@@ -7,17 +7,17 @@ import { Spinner } from "~shared/ui/spinner";
 interface AnimeListProps {
   data: Media[];
   loading: boolean;
-  totalPages: number;
-  currentPage: number;
-  onChangePage: (page: number) => void;
+  totalPages?: number;
+  currentPage?: number;
+  onChangePage?: (page: number) => void;
 }
 
 export const AnimeList: FC<AnimeListProps> = ({
   data,
   loading,
-  currentPage,
-  totalPages,
-  onChangePage,
+  currentPage = 1,
+  totalPages = 100,
+  onChangePage = () => {},
 }) => {
   return loading ? (
     <Spinner isLoading={loading} />
