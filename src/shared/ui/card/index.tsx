@@ -1,17 +1,18 @@
-import { FC } from "react";
-import { Col } from "antd";
-import { CardTitle } from "~shared/ui/card/card-title";
-import { CardContent } from "~shared/ui/card/card-content";
-import { CardItem } from "./card-item";
-import { CardPopover } from "./card-popover";
-import { Media } from "~shared/types";
-import { Link } from "react-router-dom";
+import { FC } from 'react'
+import { Col } from 'antd'
+import { CardTitle } from '~shared/ui/card/card-title'
+import { CardContent } from '~shared/ui/card/card-content'
+import { CardItem } from './card-item'
+import { CardPopover } from './card-popover'
+import { Media } from '~shared/types'
+import { Link } from 'react-router-dom'
 
 interface CardProps {
-  data: Media;
+  data: Media
+  isPopover?: boolean
 }
 
-export const Card: FC<CardProps> = ({ data }) => {
+export const Card: FC<CardProps> = ({ data, isPopover = true }) => {
   return (
     <CardPopover
       title={
@@ -29,6 +30,7 @@ export const Card: FC<CardProps> = ({ data }) => {
           type={data.type}
         />
       }
+      isPopover={isPopover}
     >
       <Col
         lg={{ span: 4 }}
@@ -48,5 +50,5 @@ export const Card: FC<CardProps> = ({ data }) => {
         </Link>
       </Col>
     </CardPopover>
-  );
-};
+  )
+}
