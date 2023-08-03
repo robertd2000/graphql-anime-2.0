@@ -15,7 +15,7 @@ export const ListMiniSkeleton: FC<ListMiniSkeletonProps> = ({ dataLength }) => {
         marginTop: '3rem',
       }}
     >
-      {[...Array(dataLength).keys()]?.map((i) => (
+      {[...Array(dataLength + 24).keys()]?.map((i) => (
         <Col lg={12} md={12} xs={24} key={i}>
           <Row justify={'space-between'} gutter={[16, 32]}>
             <Col span={12}>

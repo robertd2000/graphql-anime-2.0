@@ -1,4 +1,4 @@
-import { Row } from 'antd'
+import { Col, Row } from 'antd'
 import { useAnimeCharacters } from '~pages/anime/model/hooks/useAnimeCharacters'
 import { CardRole } from '~shared/ui/card-role'
 import { ListMiniSkeleton } from '~shared/ui/skeleton'
@@ -20,7 +20,7 @@ export const AnimeCharacters = () => {
     >
       {data?.map((title, index) =>
         index === data.length - 1 ? (
-          <div ref={ref} key={title.id}>
+          <Col span={24} ref={ref} key={title.id}>
             <CardRole
               left={{
                 description: '',
@@ -38,9 +38,10 @@ export const AnimeCharacters = () => {
                   title?.voiceActorRoles?.[0]?.voiceActor?.image.large || '',
               }}
             />
-          </div>
+          </Col>
         ) : (
           <CardRole
+            // ref={index === data.length - 1 ? ref : null}
             key={title.id}
             left={{
               description: '',
