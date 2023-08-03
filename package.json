@@ -12,6 +12,9 @@
   "dependencies": {
     "@ant-design/icons": "^5.1.4",
     "@apollo/client": "^3.7.17",
+    "@emotion/react": "^11.11.1",
+    "@mantine/core": "^6.0.17",
+    "@mantine/hooks": "^6.0.17",
     "antd": "^5.7.0",
     "compose-function": "^3.0.3",
     "graphql": "^16.7.1",

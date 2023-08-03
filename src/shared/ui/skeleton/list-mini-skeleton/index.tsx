@@ -1,6 +1,10 @@
 import { Col, Row, Skeleton } from 'antd'
+import { FC } from 'react'
 
-export const ListMiniSkeleton = () => {
+interface ListMiniSkeletonProps {
+  dataLength: number
+}
+export const ListMiniSkeleton: FC<ListMiniSkeletonProps> = ({ dataLength }) => {
   return (
     <Row
       gutter={[16, 32]}
@@ -11,7 +15,7 @@ export const ListMiniSkeleton = () => {
         marginTop: '3rem',
       }}
     >
-      {[...Array(24).keys()]?.map((i) => (
+      {[...Array(dataLength).keys()]?.map((i) => (
         <Col lg={12} md={12} xs={24} key={i}>
           <Row justify={'space-between'} gutter={[16, 32]}>
             <Col span={12}>
