@@ -1,17 +1,17 @@
-import { FC } from "react";
-import { Link } from "react-router-dom";
-import { Col } from "antd";
-import { AnimeMiniCard } from "~shared/types/anime";
-import { CardItem } from "../card/card-item";
-import { CardPopover } from "../card/card-popover";
+import { FC } from 'react'
+import { Link } from 'react-router-dom'
+import { Col } from 'antd'
+import { AnimeMiniCard } from '~shared/types/anime'
+import { CardItem } from '../card/card-item'
+import { CardPopover } from '../card/card-popover'
 
 interface CardMiniProps {
-  id: number;
-  relationType: string;
-  data: AnimeMiniCard;
+  id: number
+  relationType: string
+  data: AnimeMiniCard
 }
 
-export const CardMini: FC<CardMiniProps> = ({ data, relationType, id }) => {
+export const CardMini: FC<CardMiniProps> = ({ data }) => {
   return (
     <Col lg={{ span: 4 }} md={{ span: 8 }} sm={{ span: 12 }} xs={{ span: 12 }}>
       <CardPopover title={data.title.userPreferred} content={<></>}>
@@ -24,5 +24,5 @@ export const CardMini: FC<CardMiniProps> = ({ data, relationType, id }) => {
         </Link>
       </CardPopover>
     </Col>
-  );
-};
+  )
+}
