@@ -16,10 +16,13 @@
     "@mantine/core": "^6.0.17",
     "@mantine/hooks": "^6.0.17",
     "antd": "^5.7.0",
+    "chart.js": "^4.3.3",
     "compose-function": "^3.0.3",
     "graphql": "^16.7.1",
     "path": "^0.12.7",
     "react": "^18.2.0",
+    "react-chartjs-2": "^5.2.0",
+    "react-charts": "^3.0.0-beta.55",
     "react-dom": "^18.2.0",
     "react-router": "^6.14.1",
     "react-router-dom": "^6.14.1"

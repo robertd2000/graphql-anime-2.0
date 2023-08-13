@@ -9,8 +9,6 @@ export const AnimeMenu = () => {
     navigate(key)
   }
 
-  console.log(location.pathname)
-
   return (
     <Menu
       mode="horizontal"

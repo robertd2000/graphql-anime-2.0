@@ -7,7 +7,6 @@ import { AnimeCharacters } from './anime/ui/anime-characters'
 import { AnimeStaff } from './anime/ui/anime-staff'
 import { AnimeReviews } from './anime/ui/anime-reviews'
 import { AnimeStats } from './anime/ui/anime-stats'
-import { AnimeSocial } from './anime/ui/anime-social'
 
 export const Routing = () => {
   return (
@@ -21,7 +20,6 @@ export const Routing = () => {
         <Route path="staff" element={<AnimeStaff />} />
         <Route path="reviews" element={<AnimeReviews />} />
         <Route path="stats" element={<AnimeStats />} />
-        <Route path="social" element={<AnimeSocial />} />
       </Route>
     </Routes>
   )
