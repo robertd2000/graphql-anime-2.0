@@ -21,13 +21,13 @@ export const AnimeCharactersPreview: FC<AnimeCharactersPreviewProps> = ({
           <CardRole
             left={{
               description: "",
-              id: title.id,
+              id: title.node.id,
               title: title.node.name.userPreferred || "",
               image: title.node.image.large || "",
             }}
             right={{
               description: "",
-              id: title.id,
+              id: title.voiceActors?.[0].id,
               title: title.voiceActors?.[0].name.userPreferred || "",
               image: title.voiceActors?.[0].image.large || "",
             }}

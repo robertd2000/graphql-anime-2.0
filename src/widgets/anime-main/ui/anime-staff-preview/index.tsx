@@ -19,7 +19,7 @@ export const AnimeStaffPreview: FC<AnimeStaffPreviewProps> = ({ data }) => {
           <CardRole
             left={{
               description: "",
-              id: title.id,
+              id: title.node.id,
               title: title.node.name.userPreferred || "",
               image: title.node.image.large || "",
             }}
