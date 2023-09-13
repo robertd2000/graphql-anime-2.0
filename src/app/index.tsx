@@ -1,4 +1,4 @@
-import { Grid, Layout } from "antd";
+import { Layout } from "antd";
 import { Routing } from "~pages";
 import { Header } from "~widgets/header/ui";
 import { withProviders } from "./providers";

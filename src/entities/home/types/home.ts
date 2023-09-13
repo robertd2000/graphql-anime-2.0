@@ -7,3 +7,7 @@ export interface HomeData {
   popular: Page;
   top: Page;
 }
+
+export interface Season {}
+export interface Top {}
+export interface Trending {}

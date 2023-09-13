@@ -9,7 +9,7 @@ export const useCharacterTitles = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [data, setData] = useState<CharacterTitlesDataEdge[]>();
 
-  const [sortTerm, setSortTerm] = useState("TRENDING");
+  const [sortTerm, _] = useState("TRENDING");
 
   const {
     data: charactersTitle,
