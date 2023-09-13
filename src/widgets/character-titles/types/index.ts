@@ -9,7 +9,7 @@ export interface Character {
 
 export interface Media {
   pageInfo: PageInfo;
-  edges: Edge[];
+  edges: CharacterTitlesDataEdge[];
 }
 
 export interface PageInfo {
@@ -20,7 +20,7 @@ export interface PageInfo {
   hasNextPage: boolean;
 }
 
-export interface Edge {
+export interface CharacterTitlesDataEdge {
   id: number;
   characterRole: string;
   voiceActorRoles: VoiceActorRole[];
