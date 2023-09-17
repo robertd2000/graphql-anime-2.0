@@ -4,6 +4,7 @@ import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: "/graphql-anime-2.0/",
   plugins: [react()],
   resolve: {
     alias: {

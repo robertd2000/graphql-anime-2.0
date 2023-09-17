@@ -1,11 +1,11 @@
-import { BrowserRouter } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 import { ReactNode, Suspense } from "react";
 
 const withRouter = (component: () => ReactNode) => () =>
   (
-    <BrowserRouter>
+    <HashRouter>
       <Suspense fallback="Loading...">{component()}</Suspense>
-    </BrowserRouter>
+    </HashRouter>
   );
 
 export default withRouter;
